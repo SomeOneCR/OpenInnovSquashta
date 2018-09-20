@@ -1,0 +1,25 @@
+TEST :
+
+
+//LOAD sahi/placeholder.properties AS placeholder.file
+//CONVERT placeholder.file TO properties(structured) AS placeholder.properties
+
+//LOAD selenium-test/src/main AS selenuimFile
+//CONVERT selenuimFile TO file(param) USING context_script_params AS processedPlaceHolderDataset.file
+//CONVERT processedPlaceHolderDataset.file TO script.java (compile) AS seleniumTestCompiled 
+//CONVERT seleniumTestCompiled TO script.java.selenium2 (script) USING $(org.squashtest.ta.selenium.Login) AS seleniumTest
+//EXECUTE execute WITH seleniumTest AS seleniumResult
+//ASSERT seleniumResult IS success
+
+LOAD applications.properties AS placeholder.file
+CONVERT placeholder.file TO properties(structured) AS placeholder.properties
+
+//LOAD Classeur12.csv AS placeholder.file
+//CONVERT placeholder.file TO csv(structured) AS placeholder.csv
+
+LOAD selenium-test/src/main AS selenuimFile
+CONVERT selenuimFile TO file(param) USING placeholder.properties AS processedPlaceHolderDataset.file
+CONVERT processedPlaceHolderDataset.file TO script.java (compile) AS seleniumTestCompiled 
+CONVERT seleniumTestCompiled TO script.java.selenium2 (script) USING $(org.squashtest.ta.selenium.Deconnexion) AS seleniumTest
+EXECUTE execute WITH seleniumTest AS seleniumResult
+ASSERT seleniumResult IS success

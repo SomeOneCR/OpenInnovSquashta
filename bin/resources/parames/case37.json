@@ -1,0 +1,47 @@
+{
+  "_embedded" : {
+    "datasets" : [ {
+      "_type" : "dataset",
+      "id" : 7,
+      "name" : "data1",
+      "parameters" : [ {
+        "_type" : "parameter",
+        "_type" : "parameter",
+        "id" : 5,
+        "name" : "mdp_actuel"
+      }, {
+        "_type" : "parameter",
+        "_type" : "parameter",
+        "id" : 6,
+        "name" : "mdp"
+      } ],
+      "parameter_values" : [ {
+        "parameter_test_case_id" : 37,
+        "parameter_value" : "1234",
+        "parameter_name" : "mdp_actuel",
+        "parameter_id" : 5
+      }, {
+        "parameter_test_case_id" : 37,
+        "parameter_value" : "123456",
+        "parameter_name" : "mdp",
+        "parameter_id" : 6
+      } ],
+      "_links" : {
+        "self" : {
+          "href" : "http://127.0.0.1:7900/squash/api/rest/latest/datasets/7"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://127.0.0.1:7900/squash/api/rest/latest/test-cases/37/datasets?page=0&size=20"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

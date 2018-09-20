@@ -1,0 +1,10 @@
+{
+    "test" :
+    [
+        "ecosys1/TC1.ta", "changepassword/TCA.ta"
+    ],
+    "param" : {
+        "login" : "value13",
+        "password" : "value14"
+    }
+}

@@ -1,0 +1,55 @@
+
+TEST :
+
+
+//LOAD sahi/placeholder.properties AS placeholder.file
+//CONVERT placeholder.file TO properties(structured) AS placeholder.properties
+
+//LOAD selenium-test/src/main AS selenuimFile
+//CONVERT selenuimFile TO file(param) USING context_script_params AS processedPlaceHolderDataset.file
+//CONVERT processedPlaceHolderDataset.file TO script.java (compile) AS seleniumTestCompiled 
+//CONVERT seleniumTestCompiled TO script.java.selenium2 (script) USING $(org.squashtest.ta.selenium.Login) AS seleniumTest
+//EXECUTE execute WITH seleniumTest AS seleniumResult
+//ASSERT seleniumResult IS success
+
+LOAD applications.properties AS placeholder.file
+CONVERT placeholder.file TO properties(structured) AS placeholder.properties
+
+//LOAD Classeur12.csv AS placeholder.file
+//CONVERT placeholder.file TO csv(structured) AS placeholder.csv
+
+LOAD selenium-test/src/main AS selenuimFile
+CONVERT selenuimFile TO file(param) USING placeholder.properties AS processedPlaceHolderDataset.file
+CONVERT processedPlaceHolderDataset.file TO script.java (compile) AS seleniumTestCompiled 
+CONVERT seleniumTestCompiled TO script.java.selenium2 (script) USING $(org.squashtest.ta.selenium.challanges.ConsulterUnChallangePasse) AS seleniumTest
+EXECUTE execute WITH seleniumTest AS seleniumResult
+ASSERT seleniumResult IS success
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//LOAD path/to/javaBundle AS bundleJava.file
+
+//LOAD params/xmlDataset.xml AS placeHolderDataset.file
+
+//CONVERT placeHolderDataset.file TO file(param) USING context_script_params AS processedPlaceHolderDataset.file
+
+//LOAD selenium-test/src/main AS seleniumTestSource
+//CONVERT processedPlaceHolderDataset.file TO script.java (compile) AS seleniumTestCompiled
+//CONVERT seleniumTestCompiled TO script.java.selenium2 (script) USING $(org.squashtest.ta.selenium.Login) AS seleniumTest
+//EXECUTE execute WITH seleniumTest AS seleniumResult
+//ASSERT seleniumResult IS success
+
+//# EXECUTE_SELENIUM2 selenium WITH MAIN CLASS GithubLoginTest
+
+

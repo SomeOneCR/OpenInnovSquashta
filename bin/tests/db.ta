@@ -1,0 +1,5 @@
+TEST :
+LOAD query.sql AS script.file
+CONVERT script.file TO script.sql (script) AS script1
+
+EXECUTE execute WITH script1 ON myinwi AS $()
