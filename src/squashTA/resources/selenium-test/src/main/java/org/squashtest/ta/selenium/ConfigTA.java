@@ -45,7 +45,7 @@ public class ConfigTA {
 	 
 	@Before
 	public static WebDriver setUp() throws Exception {
-	        System.setProperty("webdriver.chrome.driver","src\\squashTA\\resources\\chromedriver.exe");
+	        //System.setProperty("webdriver.chrome.driver","src\\squashTA\\resources\\chromedriver.exe");
 	        WebDriver driver = new ChromeDriver();
 	        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
@@ -54,7 +54,7 @@ public class ConfigTA {
 	
 	public static JsonObject GetDatasetById(int id) throws Exception{
 		JsonObject jsonobject=null;
-		WebTarget target= client.target("http://127.0.0.1:7900/squash/api/rest/latest/test-cases/"+id+"/datasets");
+		WebTarget target= client.target("http://51.254.229.137:9090/squash/api/rest/latest/test-cases/"+id+"/datasets");
 		
 		Invocation.Builder invocationBuilder = target.request(MediaType.APPLICATION_JSON)
 										             .header("Authorization", authorizationHeaderValue)
