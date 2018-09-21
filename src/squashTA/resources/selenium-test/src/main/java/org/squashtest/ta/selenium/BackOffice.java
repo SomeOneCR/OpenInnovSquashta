@@ -35,22 +35,16 @@ public class BackOffice {
         driver.findElement(By.name("password")).click();
         driver.findElement(By.name("password")).clear();
         driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Mot de passe'])[1]/following::button[1]")).click();
-        driver.findElement(By.linkText("Challenges")).click();
-        driver.findElement(By.cssSelector("body > app-root > div > div > div > app-challenges > div.row > div > table > tbody > tr:nth-child(7) > td:nth-child(7) > button:nth-child(4)")).click();
+        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Mot de passe'])[1]/following::button[1]")).click();
+        //driver.findElement(By.linkText("Challenges")).click();
+        //driver.findElement(By.cssSelector("body > app-root > div > div > div > app-challenges > div.row > div > table > tbody > tr:nth-child(7) > td:nth-child(7) > button:nth-child(4)")).click();
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector("body > app-root > div > div > div > app-projects > div.row > div > table > tbody > tr:nth-child(6) > td:nth-child(9) > button.btn.btn-primary.primary_btn.btn-sm")).click();
+       // driver.findElement(By.cssSelector("body > app-root > div > div > div > app-projects > div.row > div > table > tbody > tr:nth-child(6) > td:nth-child(9) > button.btn.btn-primary.primary_btn.btn-sm")).click();
 
-
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Communiqués'])[8]/following::a[1]")).click();
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='zzzzzz'])[1]/following::td[3]")).click();
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='non'])[5]/following::i[1]")).click();
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='modifier le statut du projet'])[1]/following::span[1]")).click();
-        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='non'])[6]/following::button[1]")).click();
-        driver.findElement(By.id("statut")).click();
-        new Select(driver.findElement(By.id("statut"))).selectByVisibleText("En cours");
-        driver.findElement(By.id("statut")).click();
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Annuler'])[1]/following::button[1]")).click();
+        //driver.findElement(By.id("statut")).click();
+        //new Select(driver.findElement(By.id("statut"))).selectByVisibleText("En cours");
+        //driver.findElement(By.id("statut")).click();
+        //driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Annuler'])[1]/following::button[1]")).click();
 
     }
 
