@@ -45,7 +45,7 @@ public class ConfigTA {
 	 
 	@Before
 	public static WebDriver setUp() throws Exception {
-	        //System.setProperty("webdriver.chrome.driver","src\\squashTA\\resources\\chromedriver.exe");
+	        System.setProperty("webdriver.chrome.driver","src\\squashTA\\resources\\chromedriver.exe");
 	        WebDriver driver = new ChromeDriver();
 	        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
