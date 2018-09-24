@@ -54,9 +54,10 @@ public class ConfigTA {
                 System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
                 //ChromeOptions chromeOptions = new ChromeOptions();
                 WebDriver driver = new ChromeDriver();
-		System.out.println(" Drive starting .......")
+		System.out.println(" Drive starting .......");
 	        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
+System.out.println(" Drive 1 .......");
 	        return driver;
 	    }
 	
