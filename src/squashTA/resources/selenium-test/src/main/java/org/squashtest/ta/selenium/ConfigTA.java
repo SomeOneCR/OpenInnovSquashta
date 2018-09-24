@@ -51,7 +51,7 @@ public class ConfigTA {
 		
 		//driver = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver");
 	        //WebDriver driver = new ChromeDriver();
-                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 WebDriver driver = new ChromeDriver(chromeOptions);
 	        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
