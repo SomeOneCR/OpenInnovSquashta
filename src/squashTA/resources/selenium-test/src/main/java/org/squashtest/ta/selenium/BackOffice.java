@@ -24,8 +24,8 @@ public class BackOffice {
         //String URL = "http:// + username + ":" + password + "@" + "link";
         String URL="https://inwi-digital:]M$-%[]4@inwi-digital.neoxia-maroc.net/admin";
         //static String authorizationHeaderValue = "Basic " + java.util.Base64.getEncoder().encodeToString( usernameAndPassword.getBytes() );
-
-        driver.get(URL);
+	
+        driver.get("https://innov.inwi.ma/");
         //System.out.println(app_url);
         //driver.get(app_url);
         driver.findElement(By.name("username")).click();
