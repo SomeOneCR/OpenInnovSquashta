@@ -51,11 +51,12 @@ public class ConfigTA {
 		
 		//driver = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver");
 	        //WebDriver driver = new ChromeDriver();
-   		ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--headless");
-                chromeOptions.addArguments("--no-sandbox");
+   		//ChromeOptions chromeOptions = new ChromeOptions();
+                //chromeOptions.addArguments("--headless");
+                //chromeOptions.addArguments("--no-sandbox");
 
-                WebDriver driver = new ChromeDriver(chromeOptions);
+               // WebDriver driver = new ChromeDriver(chromeOptions);
+                WebDriver driver = new ChromeDriver();
 	        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	        driver.manage().window().maximize();
 	        return driver;
